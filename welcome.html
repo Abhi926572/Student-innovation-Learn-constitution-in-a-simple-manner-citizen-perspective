@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            padding: 40px;
+            color: #212529;
+        }
+        h1 {
+            color: #007bff;
+        }
+        ul {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            list-style-type: square;
+        }
+        a {
+            text-decoration: none;
+            color: #17a2b8;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #117a8b;
+        }
+        .logout {
+            margin-top: 30px;
+            display: inline-block;
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .logout:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ session['username'] }}!</h1>
+    <p>Choose your adventure:</p>
+    <ul>
+        <li><a href="/Bharatiya samvidhan">Bharatiya Samvidhan</a></li>
+        <li><a href="/chat">💬 Chat</a></li>
+        <li><a href="/challenge">🎯 Challenge</a></li>
+        <li><a href="/learn">📚 Learn</a></li>
+        <li><a href="/clickme">🖱 Click Me</a></li>
+        <li><a href="/speakai">🗣 SpeakAI</a></li>
+        <li><a href="/live">📺 Live</a></li>
+    </ul>
+    <a href="/logout" class="logout">Logout</a>
+</body>
+</html>
